@@ -1,23 +1,13 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { GetStaticPaths , GetStaticProps, GetStaticPropsContext} from 'next';
+import { GetStaticProps} from 'next';
+import { getShows, Show } from 'lib/Show';
 
-//const show = dynamic(() => import('../content/shows/yuri-on-ice.json'));
-
-type ShowType = 'Anime' | 'Show';
-
-type Show = {
-  slug: string,
-  name: string,
-  type: ShowType,
-  episodeCount: number,
-  episodeLength: number,
-  score: number,
-  createdAt: Date,
-  updatedAt: Date,
+type HomePageProps = {
+  data: Show[],
 }
 
-export default function Home({ ...props }) {
+export default function Home({data} : HomePageProps) {
   
   return (
     <div className={styles.container}>
@@ -28,7 +18,7 @@ export default function Home({ ...props }) {
       </Head>
 
       <main className={styles.main}>
-        <h1>{JSON.stringify(props)}</h1>
+        <p>{JSON.stringify(data)}</p>
       </main>
 
       <footer className={styles.footer}>
@@ -38,25 +28,9 @@ export default function Home({ ...props }) {
   )
 }
 
-export function getStaticProps(context: GetStaticPropsContext) : GetStaticProps<string[]> {
-  //const { postname } = ctx.params
-
-  //const content = await import(`../../posts/${postname}.md`)
-  //const config = await import(`../../siteconfig.json`)
-  //const data = matter(content.default)
-
+export const getStaticProps : GetStaticProps<HomePageProps> = async (context) => {
+  const shows = await getShows();
   return {
-    props: ['a','b'],
+    props: {data: shows},
   }
-}
-
-export function getStaticPaths() : GetStaticPaths {
-
-  const contentContext = require.context('content/shows', false, /\.json$/);
-  const paths = contentContext.keys();
-
-  return { 
-    paths,
-    fallback: false
-   };
 }
