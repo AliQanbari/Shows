@@ -21,11 +21,11 @@ export default function AppBar({ title = 'Shows' } : AppBarProps){
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">{title}</h1>
         <div className="flex-grow"></div>
         <div className="flex-row hidden lg:flex xl:mr-16">
-            <AppBarMenuItem name="Blog"/>
-            <AppBarMenuItem name="Projects"/>
-            <AppBarMenuItem name="Presentations"/>
+            <AppBarMenuItem name="All"/>
+            <AppBarMenuItem name="Anime"/>
+            <AppBarMenuItem name="Movies"/>
             <div className="divider-line justify-self-center"></div>
-            <AppBarMenuItem name="Download CV"/>
+            <AppBarMenuItem name="Login"/>
         </div>
     </div>
     );

@@ -25,3 +25,8 @@ body {
   height: 32px;
   border: 0.1px solid rgba(0, 0, 0, 0.2);
 }
+
+
+a:hover {
+  color: white;
+}
