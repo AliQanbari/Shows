@@ -5,6 +5,7 @@ import ShowCard from 'components/ShowCard';
 import React from 'react';
 import { Button, Col, Dropdown, Input, Menu, PageHeader, Row } from 'antd';
 import { UserOutlined , DownOutlined} from '@ant-design/icons';
+import TopSection from 'components/top';
 
 type HomePageProps = {
   data: Show[],
@@ -27,26 +28,19 @@ export default function Home({ data }: HomePageProps) {
   );
   return (
     <HomeLayout title={`${data.length} shows`}>
-      <PageHeader
-      title="Aligator Shows"
-      subTitle="Aligator's Show watch list"
-      ghost={false}
-      extra={<>
-        <Dropdown overlay={menu}>
-      <Button>
-        Button <DownOutlined />
-      </Button>
-    </Dropdown>
-        <Input.Search />
-      </>}
-  />
-      <Row gutter={8}>
-        {data.map(show =>
-          <Col {...size} >
+      <TopSection />
+      <div className="container mx-auto">
+        <div>
+        <Row gutter={8}>
+        {data.map((show, i) =>
+          <Col key={i} {...size} >
             <ShowCard show={show} />
           </Col>
         )}
       </Row>
+        </div>
+      </div>
+      
     </HomeLayout>
   )
 }
