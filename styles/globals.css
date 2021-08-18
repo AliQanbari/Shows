@@ -30,3 +30,8 @@ body {
 a:hover {
   color: white;
 }
+
+.stroked-text {
+  text-shadow: 1.5px 0 0 #000, 0 -1.5px 0 #000, 0 1.5px 0 #000, -1.5px 0 0 #000;
+  font-weight: normal;
+}

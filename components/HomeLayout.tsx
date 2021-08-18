@@ -16,8 +16,8 @@ export default function HomeLayout({ title, children }: LayoutProps) {
         <main>
             {children}
         </main>
-        <footer>
-            By <a href="Aligator.ir">Aligator</a>
+        <footer className="h-2">
+            {/* By <a href="Aligator.ir">Aligator</a> */}
         </footer>
     </>;
 };
