@@ -43,7 +43,7 @@ export default function TopSection({ onSearch, shows, type }: TopSectionProps) {
                         </Link>
                     </AppBarMenuItem>
                 </>} />
-                <div className="flex flex-col mt-16 lg:mt-24 mb-2">
+                <div className="flex flex-col mt-16 lg:mt-24 mb-24">
                     <div className="flex flex-col self-center text-center mt-8 lg:w-128">
                         <h1 className="text-4xl xl:text-5xl font-bold">My Show List</h1>
                         <div className="text-lg xl:text-xl align-text-bottom text-center py-4" style={{ color: '#2E3A59' }}>
