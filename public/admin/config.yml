@@ -6,6 +6,7 @@ logo_url: https://aqshows.netlify.app/icon-sm.webp
 backend:
   name: github
   branch: main
+  repo: AliQanbari/Shows
 
 media_folder: public/images
 public_folder: ''
