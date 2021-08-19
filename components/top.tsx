@@ -13,9 +13,9 @@ type TopSectionProps = {
 };
 
 export default function TopSection({ onSearch, shows, type }: TopSectionProps) {
-    const watchTime = shows
+    const watchTime = shows.length > 0 ? shows
         .map(show => show.episodeCount * show.episodeLength)
-        .reduce((w1, w2) => w1 + w2);
+        .reduce((w1, w2) => w1 + w2) : 0;
 
     const hours = (watchTime / 60) >> 0;
     const minutes = (watchTime % 60);
