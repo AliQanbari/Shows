@@ -1,3 +1,40 @@
+site_url: https://shows.aliqanbari.ir/
+logo_url: https://shows.aliqanbari.ir/icon.png
+
+#publish_mode: editorial_workflow
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
+
+media_folder: public/images
+public_folder: ''
+
+# Docs: https://www.netlifycms.org/docs/configuration-options/#collections
+collections:
+  - name: 'shows'
+    label: 'Shows'
+    label_singular: 'Show'
+    folder: 'content/shows'
+    slug: '{{slug}}'
+    create: true
+    format: 'json'
+    sortable_fields: ['name', 'score', 'type', 'updatedAt']
+    fields:
+      - { name: 'slug', label: 'Slug', widget: 'string' }
+      - { name: 'name', label: 'Name', widget: 'string' }
+      - { name: 'type', label: 'Show Type', widget: 'select', options: ["Anime","Movie"]}
+      - { name: 'episodeCount', label: 'Number of Episodes', widget: 'number', value_type: 'int'}
+      - { name: 'episodeLength', label: 'Length of each episode', widget: 'number', value_type: 'int'}
+      - { name: 'score', label: 'Score', widget: 'number', value_type: 'int', min: 1, max: 10}
+      - { name: 'createdAt', label: 'Created At', widget: 'datetime' }
+      - { name: 'updatedAt', label: 'Updated At', widget: 'datetime' }
+  - name: 'memes'
+    label: 'Memes'
+    label_singular: 'Meme'
+    folder: 'assets/content/memes'
+    slug: '{{name}}'
+    create: true
+    format: 'json'
+    sortable_fields: ['name', 'updatedAt']
+    fields:
+      - { label: 'image', name: 'image', widget: 'image'}
