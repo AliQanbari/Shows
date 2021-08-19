@@ -1,7 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import { AppBar, AppBarMenuItem, SmallVerticalDivider, SearchBar } from "aq_components/dist";
 import { Show } from "lib/Show";
+import AppBar from "./aq_components/app_bar";
+import AppBarMenuItem from "./aq_components/app_bar_menu_item";
+import SmallVerticalDivider from "./aq_components/divider_vertical_small";
+import SearchBar from "./aq_components/search_bar";
 
 type TopSectionProps = {
     type: string,

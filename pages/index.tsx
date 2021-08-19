@@ -15,13 +15,24 @@ export default function Home({ data }: HomePageProps) {
   const { type } = router.query;
   const [filter, setFilter] = useState('');
   var shows = data.filter((s) => s.name.toLowerCase().indexOf(filter) !== -1);
+
   var typeName = 'Everything';
+
   if(type !== undefined){
     console.log('type', type);
     shows = shows.filter(s => s.type === type);
     if(type === 'Anime') typeName  = 'Anime';
     else typeName = 'Movies';
   }
+
+  if(filter !== ''){
+    if(typeName !== 'Everything'){
+      typeName = `"${filter}" ${typeName}`;
+    } else {
+      typeName = `"${filter}"`;
+    }
+  }
+
   return (
     <HomeLayout title={`${data.length} shows`}>
       <TopSection 
