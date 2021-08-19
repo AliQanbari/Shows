@@ -1,0 +1,10 @@
+{
+  "createdAt": "2021-08-19T11:10:08.371Z",
+  "updatedAt": "2021-08-19T11:10:08.399Z",
+  "name": "Silicon Valley",
+  "slug": "silicon-valley",
+  "type": "Movie",
+  "score": 10,
+  "episodeLength": 30,
+  "episodeCount": 53
+}
