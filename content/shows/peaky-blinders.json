@@ -1,0 +1,10 @@
+{
+  "createdAt": "2021-08-19T11:05:30.399Z",
+  "updatedAt": "2021-08-19T11:05:30.408Z",
+  "name": "Peaky Blinders",
+  "slug": "peaky-blinders",
+  "type": "Movie",
+  "episodeCount": 30,
+  "score": 8,
+  "episodeLength": 58
+}
