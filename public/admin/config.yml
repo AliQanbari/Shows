@@ -1,5 +1,6 @@
+display_url: https://shows.aliqanbari.ir/
 site_url: https://aqshows.netlify.app/
-logo_url: https://aqshows.netlify.app/icon.png
+logo_url: https://aqshows.netlify.app/icon-sm.webp
 
 #publish_mode: editorial_workflow
 backend:
@@ -15,7 +16,8 @@ collections:
     label: 'Shows'
     label_singular: 'Show'
     folder: 'content/shows'
-    slug: '{{slug}}'
+    identifier_field: slug
+    slug: '{{fields.slug}}'
     create: true
     format: 'json'
     sortable_fields: ['name', 'score', 'type', 'updatedAt']
