@@ -4,7 +4,7 @@ logo_url: https://aqshows.netlify.app/icon-sm.webp
 
 #publish_mode: editorial_workflow
 backend:
-  name: github
+  name: git-gateway
   branch: main
   repo: AliQanbari/Shows
 
