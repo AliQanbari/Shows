@@ -1,1 +1,10 @@
-{"slug":"money-heist","name":"Money Heist","type":"Movie","episodeCount":38,"episodeLength":45,"score":9,"createdAt":"2021-04-06 00:44:45.229359","updatedAt":"2021-04-06 00:44:45.229359"}
+{
+  "slug": "money-heist",
+  "name": "Money Heist",
+  "type": "Movie",
+  "episodeCount": 41,
+  "episodeLength": 45,
+  "score": 9,
+  "createdAt": "2021-04-06 00:44:45.229359",
+  "updatedAt": "2021-04-06 00:44:45.229359"
+}
