@@ -1,0 +1,10 @@
+{
+  "createdAt": "2022-07-08T06:45:10.613Z",
+  "updatedAt": "2022-07-08T06:45:10.628Z",
+  "name": "Mr. Robot",
+  "slug": "mr-robot",
+  "type": "Movie",
+  "episodeCount": 49,
+  "episodeLength": 45,
+  "score": 8
+}
